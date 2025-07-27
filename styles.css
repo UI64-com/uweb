@@ -17,6 +17,7 @@ html, body {
   text-align: center;
   max-width: 100vw;
   overflow-wrap: break-word;
+  color:#7d7d7d;
 }
 
 .center-container img.vector-image:nth-child(2) {
@@ -214,3 +215,44 @@ width: auto;
     opacity: 0;
   }
 }
+
+/* wave */
+
+.wave-overlay {
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle at 30% 30%, #999, #333 70%);
+      transform: rotate(-10deg) scale(1.5);
+      z-index: 10;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    @keyframes waveIn {
+      0% {
+        transform: translateX(-100%) skewX(-10deg);
+        opacity: 0;
+      }
+      50% {
+        transform: translateX(0%) skewX(-10deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateX(100%) skewX(-10deg);
+        opacity: 0;
+      }
+    }
+
+    .animate-wave {
+      animation: waveIn 1.6s ease-in-out forwards;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      padding: 40px;
+    }
+    
