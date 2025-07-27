@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js"></script>
+  <title>UI64</title>
+
+</head>
+<body>
+  
+  <div class="menu-trigger" onclick="showContent()">
+    <!-- Animated SVG (default visible) -->
+    <svg class="menu-svg" width="70" height="70" viewBox="0 0 70 70" xmlns="http://www.w3.org/2000/svg">
+      <rect
+        x="14"
+        y="27"
+        width="42"
+        height="16"
+        rx="8"
+        fill="#7d7d7d"
+      >
+        <animate attributeName="width" values="42;16;16;42" keyTimes="0;0.4;0.65;1" dur="3s" repeatCount="indefinite" />
+        <animate attributeName="x" values="14;35;35;14" keyTimes="0;0.4;0.45;1" dur="3s" repeatCount="indefinite" />
+        <animateTransform attributeName="transform" type="rotate" values="0 35 35;360 35 35" dur="4s" repeatCount="indefinite" />
+      </rect>
+    </svg>
+
+    <!-- Static SVG for hover with CSS width/x animation -->
+    <svg class="menu-svg alt" width="70" height="70" viewBox="0 0 70 70" xmlns="http://www.w3.org/2000/svg" style="overflow: visible;">
+      <rect
+        class="alt-rect"
+        x="14"
+        y="27"
+        width="16"
+        height="16"
+        rx="8"
+        fill="#7d7d7d"
+      />
+    </svg>
+  </div>
+
+  <div id="transition">
+
+    <script>
+      const container = document.getElementById('transition');
+      fetch('logo.html')
+        .then(response => response.text())
+        .then(html => {
+          container.innerHTML = html;
+        });
+    </script>
+
+  </div>
+</body>
+</html>
