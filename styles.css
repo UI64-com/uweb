@@ -146,74 +146,13 @@ width: auto;
   x: 14px; /* keep left edge fixed */
 }
 
-/* transition */
-
-#transition {
-  position: fixed;
-  inset: 0;
-  z-index: 1;
-  overflow: hidden;
-  /* pointer-events: none; */
-}
-
-.hidden {
-  display: none;
-}
-
-#transition.active {
-  pointer-events: auto;  /* ✅ temporarily blocks clicks during animation if needed */
-}
-
-.strip {
-  position: absolute;
-  width: 100%;
-  height: calc(10% + 1px); /* add 1px to avoid gaps */
-  animation-fill-mode: forwards;
-}
-
-
-.strip.left-in {
-  transform: translateX(-100%);
-  animation: slideInLeft 0.6s ease forwards;
-}
-
-.strip.right-in {
-  transform: translateX(100%);
-  animation: slideInRight 0.6s ease forwards;
-}
-
-.strip.left-out {
-  animation: slideOutLeft 0.6s ease forwards;
-}
-
-.strip.right-out {
-  animation: slideOutRight 0.6s ease forwards;
-}
-
-@keyframes slideInLeft {
-  to {
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideInRight {
-  to {
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideOutLeft {
-  to {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-}
-
-@keyframes slideOutRight {
-  to {
-    transform: translateX(100%);
-    opacity: 0;
-  }
+/* info */
+.info-paragraph {
+  margin-top: 200px;
+  width: 50%;
+  color: #7d7d7d;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* wave */
@@ -223,7 +162,7 @@ width: auto;
       top: -50%;
       left: -50%;
       width: 200%;
-      height: 200%;
+      height: 150%;
       background: radial-gradient(circle at 30% 30%, #999, #333 70%);
       transform: rotate(-10deg) scale(1.5);
       z-index: 10;
@@ -250,9 +189,9 @@ width: auto;
       animation: waveIn 1.6s ease-in-out forwards;
     }
 
-    .content {
+    /* .content {
       position: relative;
       z-index: 1;
       padding: 40px;
     }
-    
+     */

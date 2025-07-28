@@ -8,7 +8,7 @@
 
 </head>
 <body>
-  
+  <div id="t-holder"></div>
   <div class="menu-trigger" onclick="showContent()">
     <!-- Animated SVG (default visible) -->
     <svg class="menu-svg" width="70" height="70" viewBox="0 0 70 70" xmlns="http://www.w3.org/2000/svg">
@@ -41,7 +41,6 @@
   </div>
 
   <div id="transition">
-
     <script>
       const container = document.getElementById('transition');
       fetch('logo.html')
@@ -50,7 +49,6 @@
           container.innerHTML = html;
         });
     </script>
-
   </div>
 </body>
 </html>
