@@ -2,6 +2,10 @@
   --primary-color: #7d7d7d; /* Blue */
 }
 
+/* * {
+    outline: 1px solid rgb(161, 161, 161); 
+} */
+
 html, body {
   margin: 0;
   padding: 0;
@@ -218,18 +222,22 @@ html, body {
   box-sizing: border-box;
   text-align: center;
   margin-top: 40px;
+
+  display: flex;
+  flex-direction: column;   /* Stack image-block and caption vertically */
+  align-items: center;      /* Center both horizontally */
 }
 
-.image-wrapper svg {
-  width: 50%;
-  height: auto;
-  display: block;
-}
 
 .image-block {
   aspect-ratio: 1 / 1;
   overflow: hidden;
   border-radius: 8px;
+  align-self: center;
+
+  display: flex;            /* Make it a flex container */
+  justify-content: center;  /* Center svg horizontally */
+  align-items: center;      /* Center svg vertically */
 }
 
 .image-block svg {
@@ -260,7 +268,7 @@ html, body {
 /* portraits */
 .portrait path {
   fill: var(--primary-color);
-  /* stroke: black; 
-  stroke-width: 1px; */
+  stroke:  var(--primary-color); 
+  /* stroke-width: 4px; */
 }
 
