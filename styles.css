@@ -14,8 +14,9 @@ html, body {
   background-color: black;
   /* background-color: rgb(15, 15, 15); */
   font-family: Inter, Arial, sans-serif;
+  font-weight: lighter;
   height: 100%;
-  font-size: 14px;
+  font-size: 18px;
 }
 
 .center-container {
@@ -41,11 +42,13 @@ html, body {
 }
 
 .responsive-svg {
+  margin-top: auto;
   width: 100%;
 }
 
 .responsive-svg-shrinked {
-  width: 60%;
+  margin-top: 60px;
+  width: 80%;
 }
 
 .cursor:hover {
@@ -187,25 +190,25 @@ html, body {
   animation: waveIn 1.6s ease-in-out forwards;
 }
 
-/* .content {
-  position: relative;
-  z-index: 1;
-  padding: 40px;
-}
-  */
-
-/* info */
-#info {
-  /* background-color: #333; */
+.info-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .info-paragraph {
-  margin-top: 20px;
-  /* width: 80%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 180px;
+  padding: 40px 40px 40px 40px;
   color: var(--primary-color);
-  margin-left: 50px;
-  margin-right: 50px;
-  min-width: 300px;
+  /* min-height: 240px; */
+  /* border-color: white; */
+  text-align: justify;
+  /* outline: 1px solid var(--primary-color); */
 }
 
 .hiring {
@@ -304,22 +307,16 @@ html, body {
   display: block;
 }
 
-/* contact */
-.contact {
-  height: 110px;
-}
-
-
 .contact-button {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 160px; /* You can adjust width as needed */
-  height: 40px; /* Adjust height if needed */
+  height: 20px; /* Adjust height if needed */
   border-radius: 30px; /* Rounded button */
   cursor: pointer;
   text-align: center;
-  margin: 60 auto; /* Center the button horizontally */
+  margin: 30px 4px 60px 4px; /* Center the button horizontally */
   transition: background-color 0.3s ease;
   /* color: black; */
   /* background-color: var(--primary-color);  */
@@ -340,7 +337,7 @@ html, body {
   text-anchor: middle;
   font-size: 14px;
   font-weight: bold;
-  fill: white;
+  fill: var(--primary-color);
   stroke: none;
   pointer-events: none;
   font-weight: lighter;
