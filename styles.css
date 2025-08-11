@@ -22,6 +22,15 @@ html, body {
   user-select: none;         /* Standard */
 }
 
+.tagline {
+  padding-bottom: 24px;
+  margin: 0 0 0 0;
+}
+
+.slogan {
+  margin: 0 0 0 0;
+}
+
 .upper-div {
   display: flex;
   justify-content: center;
@@ -212,7 +221,7 @@ html, body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: left;
   width: 180px;
   padding: 40px 40px 40px 40px;
   color: var(--primary-color);
