@@ -10,13 +10,24 @@ html, body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  background-color: white;
   background-color: black;
-  /* background-color: rgb(15, 15, 15); */
-  font-family: Inter, Arial, sans-serif;
-  font-weight: lighter;
+  font-family: 'Inter', Arial, sans-serif;
+  font-weight: 300;
   height: 100%;
-  font-size: 16px;
+  font-size: 18px;
+
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* IE10+ */
+  user-select: none;         /* Standard */
+}
+
+.upper-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%; 
 }
 
 .center-container {
@@ -47,7 +58,7 @@ html, body {
 }
 
 .responsive-svg-shrinked {
-  margin-top: 60px;
+  /* margin-top: 60px; */
   width: 80%;
 }
 
@@ -333,14 +344,17 @@ html, body {
   fill: white;
 }
 
+#glow-button {
+  pointer-events: all;
+}
+
 .contact-text {
   text-anchor: middle;
   font-size: 14px;
-  font-weight: bold;
   fill: var(--primary-color);
   stroke: none;
   pointer-events: none;
-  font-weight: lighter;
+  font-weight: 400;
 }
 
 .contact-text:hover {

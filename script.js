@@ -1,7 +1,6 @@
 function showContent() {
-  console.log("showContent");
   runTransition(() => {
-    // content logic goes here later if needed
+    // extra content logic placeholder
   });
 }
 
@@ -27,10 +26,6 @@ function runTransition(callback = () => {}) {
 function swapContent() {
     const container = document.getElementById('transition');
     const placeholder = container.querySelector('.content') || container;
-
-    // setTimeout(() => {
-    //   console.log('800')
-    // }, 800);
 
     setTimeout(() => {
     const url = container.querySelector('#info') ? 'logo.html' : 'info.html';
@@ -81,3 +76,8 @@ function loadContent() {
     }
   }, 800);
 }
+
+function sendMail() {
+  window.location.href = "mailto:contact@ui64.com";
+}
+
